@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base',
-    'fontawesomefree'
+    'fontawesomefree',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -90,6 +91,11 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+}
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+    },
 }
 
 
