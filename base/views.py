@@ -70,10 +70,59 @@ def home(request):
                 'dec_closed': properties.get('dec_closed'),
                 'dec_total': properties.get('dec_total'),
                 'coordinates': geometry,
-                'app_type': properties.get('app_type'),  # New property
                 'dec_level': properties.get('dec_level'),  # New property
+                
+            }
+
+            # Add the transformed object to the array
+            transformed_array.append(transformed_object)
+
+        return transformed_array
+    
+    def transform_json2_to_array(json_data):
+    # Extract the features from the JSON data
+        features = json_data.get('features', [])
+
+        # Create an array to store the transformed objects
+        transformed_array = []
+
+        # Loop through each feature and extract relevant information
+        for feature in features:
+            properties = feature.get('properties', {})
+            geometry = feature.get('geometry', {}).get('coordinates', [])
+
+            transformed_object = {
+                'year': properties.get('year'),
+                'coo_name': properties.get('coo_name'),
+                'coa_name': properties.get('coa_name'),
+                'app_type': properties.get('app_type'),  # New property
                 'applied': properties.get('applied'),
+                'coordinates': geometry,
+            }
+
+            # Add the transformed object to the array
+            transformed_array.append(transformed_object)
+
+        return transformed_array
+    
+    def transform_json3_to_array(json_data):
+    # Extract the features from the JSON data
+        features = json_data.get('features', [])
+
+        # Create an array to store the transformed objects
+        transformed_array = []
+
+        # Loop through each feature and extract relevant information
+        for feature in features:
+            properties = feature.get('properties', {})
+            geometry = feature.get('geometry', {}).get('coordinates', [])
+
+            transformed_object = {
+                'year': properties.get('year'),
+                'coo_name': properties.get('coo_name'),
+                'coa_name': properties.get('coa_name'),
                 'm_total': properties.get('m_total'),
+                'coordinates': geometry,
                 'f_total': properties.get('f_total'),
                 'm_0_11': properties.get('m_0_11'),
                 'f_0_11': properties.get('f_0_11'),
@@ -81,7 +130,7 @@ def home(request):
                 'f_12_17': properties.get('f_12_17'),
                 'm_above_18': properties.get('m_above_18'),
                 'f_above_18': properties.get('f_above_18'),
-                'app_type': properties.get('app_type'),
+           
             }
 
             # Add the transformed object to the array
@@ -94,10 +143,10 @@ def home(request):
     # print("-------------------------")
     # print(transform_json_to_array(response.json()))
     data = transform_json_to_array(response.json())
-    data2 = transform_json_to_array(response2.json())
+    data2 = transform_json2_to_array(response2.json())
     print('------------------data2------------------')
     print(data2)
-    data3 = transform_json_to_array(response3.json())
+    data3 = transform_json3_to_array(response3.json())
     print('------------------data3------------------')
     print(data3)
     
@@ -147,6 +196,7 @@ def home(request):
                 'dec_other': entry['dec_other'],
                 'dec_rejected': entry['dec_rejected'],
                 'dec_closed': entry['dec_closed'],
+                'dec_recognized': entry['dec_recognized'],
                 'dec_total': entry['dec_total'],
                 'dec_level': entry['dec_level'],
                 'procedure_type': entry['procedure_type'],

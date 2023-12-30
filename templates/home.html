@@ -17,9 +17,7 @@
       defer
     ></script>
     <style>
-      #map {
-        height: 60%;
-      }
+      
     </style>
   </head>
   <body>
@@ -32,8 +30,22 @@
       </select>
       <button type="submit">Update</button>
     </form>
-    <div class="h-[600px] w-[600px] flex flex-row-reverse">
-      <div class="h-[600px] w-[600px]" id="map">
+    <div class="flex justify-between">
+      <div class=" w-2/4 p-10 h-screen overflow-y-auto bg-[#f8f8fc] rounded-md">
+        <p class=''>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod quam eu tortor congue, quis tincidunt elit fringilla. Nunc et neque vel quam tincidunt facilisis. Nulla facilisi. Praesent hendrerit, quam quis malesuada facilisis, libero libero hendrerit erat, nec efficitur libero odio eu tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vitae turpis ut elit fermentum lacinia vel non velit. Sed euismod semper sapien, ac venenatis sapien dignissim vel. Pellentesque sodales ullamcorper libero, a tempor urna vehicula ac. Fusce nec erat libero. Fusce congue nunc id ipsum interdum, in laoreet orci dictum. Maecenas eu magna vitae ex tincidunt faucibus id in massa. Vivamus eu rhoncus tortor. Sed eget fermentum quam. Donec eget aliquam nulla, sed consectetur mi. Ut vel viverra libero. Integer ullamcorper orci nec metus ultrices vehicula. Duis consequat odio eget justo sodales, eu cursus elit vehicula.
+
+Proin auctor non risus eu iaculis. Sed bibendum bibendum felis, sit amet euismod est eleifend ut. Vestibulum et odio augue. Etiam cursus arcu sed arcu cursus, quis vehicula turpis bibendum. Vestibulum ut justo ac libero efficitur bibendum. Nulla lacinia, metus a congue euismod, odio elit consectetur tortor, ac luctus odio massa in augue. Sed elementum justo vel tellus euismod bibendum. Suspendisse potenti. Curabitur at justo vel sapien luctus gravida. Sed sed volutpat augue. Maecenas varius, nunc vel aliquet suscipit, lectus odio pharetra est, vel tincidunt quam erat in erat. Integer ultrices, dolor a bibendum scelerisque, metus ex lobortis arcu, nec tincidunt dui lorem at justo. Phasellus eu velit tristique, lacinia est non, efficitur tortor. Nunc et mattis tortor. Cras non enim id sapien congue tempus in sit amet purus.
+
+Vivamus non congue tellus. Integer volutpat justo nec sapien lacinia, quis condimentum justo sodales. Sed malesuada euismod libero, eu efficitur felis rhoncus id. Suspendisse potenti. Suspendisse potenti. Sed non dui id tortor eleifend ultrices. Etiam tincidunt libero vel lacus fringilla, ac venenatis metus aliquet. Vestibulum viverra, justo sit amet eleifend sagittis, urna leo elementum leo, nec viverra purus est ut felis. Nullam congue ac eros vel rhoncus. Sed vitae justo nec odio commodo facilisis. Vivamus nec sapien justo. Curabitur ullamcorper varius turpis, a lacinia lorem volutpat a. Fusce eu nunc vel felis congue hendrerit. Duis in hendrerit turpis.
+
+Praesent malesuada, odio vel luctus euismod, sapien tellus efficitur lectus, non blandit lorem velit ut ex. Sed quis justo eu purus egestas venenatis ac sit amet sapien. Proin at vestibulum justo. Nam non nisl id libero hendrerit dignissim. Ut auctor, nunc sit amet vehicula tristique, nunc libero gravida justo, et fermentum arcu odio eget nulla. Vestibulum id sem et orci semper vehicula. Sed a tincidunt urna. Sed venenatis scelerisque nisl at feugiat. Curabitur tincidunt feugiat felis, vel hendrerit eros. Sed non libero non ex dictum ultrices. Nullam interdum ex ac libero bibendum, id suscipit dolor rhoncus. Integer vel varius erat. In viverra felis non mi dignissim blandit.
+
+Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus id nunc et libero interdum accumsan. Sed varius arcu ac libero mattis, id volutpat ex eleifend. Proin id tristique dui. Etiam tristique odio ac efficitur auctor. Nam sed lacinia justo. Fusce nec quam non ipsum facilisis fermentum in non sem. Ut ut rutrum est. Aenean commodo vestibulum massa, a varius velit fermentum eget. Integer quis nisl in erat volutpat consequat. Aenean vitae ex nunc. Nulla facilisi. Integer eu nunc a metus lacinia euismod. Maecenas volutpat fermentum sapien eget fringilla.
+
+Fusce ut orci id libero tristique fermentum id a odio. Sed sit amet facilisis justo. Pellentesque eu odio nec elit euismod interdum a eget ligula. Nullam eu elit vel risus dignissim euismod. Fusce condimentum, lectus id cursus venenatis, felis massa maximus nulla, in fermentum quam sem vitae ligula. Vestibulum dictum orci eu diam feugiat, in interdum ante blandit. Nam ut lectus vitae ligula ultricies interdum eget ac nulla. Curabitur vehicula euismod turpis eu fermentum. In hac habitasse platea dictumst. Cras a mauris sit amet nunc placerat dapibus. Vestibulum in purus sem. Phasellus in dapibus libero, ac finibus quam. Nullam vestibulum risus eget eleifend tristique. Integer dignissim libero in nibh cursus, non eleifend libero egestas. In consectetur, justo eget suscipit egestas, nunc purus dignissim augue, non tincidunt turpis quam eu turpis. In hac habitasse platea dictumst.</p>
+      <div class="box-shadow pt-5" id="info-card"></div>
+      </div>
+      <div class="sticky top-0 h-screen w-[100%]" id="map">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, suscipit.
         Quia quam commodi asperiores sint laudantium earum nostrum voluptatibus
         iure repudiandae. Ea ducimus tenetur fuga voluptate eligendi quam
@@ -53,12 +65,8 @@
         accusantium. Ratione praesentium hic sint rem exercitationem ut
         provident. lorem150
       </div>
-      {% comment %}
-      <div class="text-black">{{ coordinates_list_json|safe|escapejs }}</div>
-      {% endcomment %}
 
-      <div id="info-card"></div>
-      <button onclick="drawDemo()">Draw Demo</button>
+      
     </div>
 
     <script type="text/javascript">
@@ -132,10 +140,37 @@
                                           var card = document.getElementById("info-card");
                                           card.style.display = "block";
                                           card.innerHTML = `
+                                          <h1 class="text-blue-500 font-bold text-2xl uppercase">${data.coa_name}</h1>
+                                          <p class="font-medium text-blue-500 text-2xl">${data.year}</p>
+                                          <div class="h-[2px] bg-blue-500 mt-3 w-[100%]"></div>
+
+                                          <div class="flex gap-5 items-center mt-3">
+                                            <h2 class="text-blue-500 text-4xl">${data.applied}<h2>
+                                            <p class="text-2xl">applications</p>
+                                          </div>
+
+                                          <div class="flex gap-3 mt-4">
+                                          <div class="flex gap-2 items-center border-2 border-blue-500 p-5">
+                                            <p class="text-7xl text-gray-500">
+                                              <i class="fas fa-female"></i>
+                                               
+                                            </p>
+                                            <p class="text-3xl">${data.f_total}</p>
+                                          </div>
+                                          <div class="flex gap-2 items-center border-2 border-blue-500 p-5">
+                                            <p class="text-7xl text-gray-500">
+                                              <i class="fas fa-male"></i>
+                                             
+                                            </p>
+                                            <p class="text-3xl"> ${data.m_total}</p>
+                                          </div>
+                                        </div>
+                                          
                                           <p>Year: ${data.year}</p>
                                           <p>applied: ${data.applied}</p>
                                           <p>decision closed: ${data.dec_closed}</p>
                                           <p>Decision level: ${data.dec_level}</p>
+                                          <p>Decision recognized: ${data.dec_recognized}</p>
                                           <p>Decision rejected: ${data.dec_rejected}</p>
                                           <p>total decisions: ${data.dec_total}</p>
                                           <p>total females: ${data.f_total}</p>
