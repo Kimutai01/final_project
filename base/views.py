@@ -7,11 +7,11 @@ def home(request):
     print(year_param)
     if year_param:
         baseurl = 'https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=IPSDI_WT23:Asylum%20decisions%20for%20Ukrainian%20applicants%20in%20Europe&maxFeatures=1000&outputFormat=application/json&CQL_FILTER=year=' + year_param
-        baseurl2 = 'https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=IPSDI_WT23:Ukraine%20asylum%20applications%20in%20Europe&maxFeatures=1000&outputFormat=application/json&CQL_FILTER=year=' + year_param
+        baseurl2 = 'https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=IPSDI_WT23%3AAsylum%20applications%20for%20Ukrainians%20in%20Europe&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=year=' + year_param
         baseurl3 = 'https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=IPSDI_WT23%3AUkrainian%20asylum%20applications%20demographic%20breakdown%20in%20Europe&maxFeatures=1000&outputFormat=application%2Fjson&CQL_FILTER=year=' + year_param
     else:
         baseurl = 'https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=IPSDI_WT23:Asylum%20decisions%20for%20Ukrainian%20applicants%20in%20Europe&maxFeatures=1000&outputFormat=application/json&CQL_FILTER=year=2020'
-        baseurl2 = 'https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=IPSDI_WT23:Ukraine%20asylum%20applications%20in%20Europe&maxFeatures=1000&outputFormat=application/json&CQL_FILTER=year=2020'
+        baseurl2 = 'https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=IPSDI_WT23%3AAsylum%20applications%20for%20Ukrainians%20in%20Europe&maxFeatures=50&outputFormat=application%2Fjson&CQL_FILTER=year=2020'
         baseurl3 = 'https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=IPSDI_WT23%3AUkrainian%20asylum%20applications%20demographic%20breakdown%20in%20Europe&maxFeatures=1000&outputFormat=application%2Fjson&CQL_FILTER=year=2020'
 
     # Disable SSL verification (not recommended in production)
