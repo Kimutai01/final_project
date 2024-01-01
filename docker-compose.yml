@@ -1,0 +1,23 @@
+version: "3"
+services:
+  medassist:
+    build:
+      context: .
+    ports:
+      - "8005:8005"
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+    restart: always
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5435:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data/
+    restart: always
