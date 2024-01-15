@@ -47,37 +47,22 @@
     <div class="flex justify-between">
       <div class=" w-2/4 p-10 h-screen overflow-y-auto bg-[#f8f8fc] rounded-md">
         <div>
-            <button id="infoBtn1" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="showInfoContent1()">Info1</button>
-<button id="infoBtn2" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="showInfoContent2()">Info2</button>
+            <button id="infoBtn1" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="showInfoContent1()">Layers</button>
+<button id="infoBtn2" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="showInfoContent2()">Info</button>
           </div>
         
-          {% comment %} <canvas id="myLineChart"></canvas> {% endcomment %}
+          
           <div id="infoContent1">
-          <div class="box-shadow pt-5" id="info-card"></div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod quam eu tortor congue, quis tincidunt elit fringilla. Nunc et neque vel quam tincidunt facilisis. Nulla facilisi. Praesent hendrerit, quam quis malesuada facilisis, libero libero hendrerit erat, nec efficitur libero odio eu tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vitae turpis ut elit fermentum lacinia vel non velit. Sed euismod semper sapien, ac venenatis sapien dignissim vel. Pellentesque sodales ullamcorper libero, a tempor urna vehicula ac. Fusce nec erat libero. Fusce congue nunc id ipsum interdum, in laoreet orci dictum. Maecenas eu magna vitae ex tincidunt faucibus id in massa. Vivamus eu rhoncus tortor. Sed eget fermentum quam. Donec eget aliquam nulla, sed consectetur mi. Ut vel viverra libero. Integer ullamcorper orci nec metus ultrices vehicula. Duis consequat odio eget justo sodales, eu cursus elit vehicula.
+             <div class="box-shadow pt-5" id="info-card"></div>
+             <p class="my-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod quam eu </p>
+            <canvas id="LineChart"></canvas>
+            <canvas id="Line2Chart"></canvas>
 
-Proin auctor non risus eu iaculis. Sed bibendum bibendum felis, sit amet euismod est eleifend ut. Vestibulum et odio augue. Etiam cursus arcu sed arcu cursus, quis vehicula turpis bibendum. Vestibulum ut justo ac libero efficitur bibendum. Nulla lacinia, metus a congue euismod, odio elit consectetur tortor, ac luctus odio massa in augue. Sed elementum justo vel tellus euismod bibendum. Suspendisse potenti. Curabitur at justo vel sapien luctus gravida. Sed sed volutpat augue. Maecenas varius, nunc vel aliquet suscipit, lectus odio pharetra est, vel tincidunt quam erat in erat. Integer ultrices, dolor a bibendum scelerisque, metus ex lobortis arcu, nec tincidunt dui lorem at justo. Phasellus eu velit tristique, lacinia est non, efficitur tortor. Nunc et mattis tortor. Cras non enim id sapien congue tempus in sit amet purus.
-
-Vivamus non congue tellus. Integer volutpat justo nec sapien lacinia, quis condimentum justo sodales. Sed malesuada euismod libero, eu efficitur felis rhoncus id. Suspendisse potenti. Suspendisse potenti. Sed non dui id tortor eleifend ultrices. Etiam tincidunt libero vel lacus fringilla, ac venenatis metus aliquet. Vestibulum viverra, justo sit amet eleifend sagittis, urna leo elementum leo, nec viverra purus est ut felis. Nullam congue ac eros vel rhoncus. Sed vitae justo nec odio commodo facilisis. Vivamus nec sapien justo. Curabitur ullamcorper varius turpis, a lacinia lorem volutpat a. Fusce eu nunc vel felis congue hendrerit. Duis in hendrerit turpis.
-
-Praesent malesuada, odio vel luctus euismod, sapien tellus efficitur lectus, non blandit lorem velit ut ex. Sed quis justo eu purus egestas venenatis ac sit amet sapien. Proin at vestibulum justo. Nam non nisl id libero hendrerit dignissim. Ut auctor, nunc sit amet vehicula tristique, nunc libero gravida justo, et fermentum arcu odio eget nulla. Vestibulum id sem et orci semper vehicula. Sed a tincidunt urna. Sed venenatis scelerisque nisl at feugiat. Curabitur tincidunt feugiat felis, vel hendrerit eros. Sed non libero non ex dictum ultrices. Nullam interdum ex ac libero bibendum, id suscipit dolor rhoncus. Integer vel varius erat. In viverra felis non mi dignissim blandit.
-
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus id nunc et libero interdum accumsan. Sed varius arcu ac libero mattis, id volutpat ex eleifend. Proin id tristique dui. Etiam tristique odio ac efficitur auctor. Nam sed lacinia justo. Fusce nec quam non ipsum facilisis fermentum in non sem. Ut ut rutrum est. Aenean commodo vestibulum massa, a varius velit fermentum eget. Integer quis nisl in erat volutpat consequat. Aenean vitae ex nunc. Nulla facilisi. Integer eu nunc a metus lacinia euismod. Maecenas volutpat fermentum sapien eget fringilla.
-
-Fusce ut orci id libero tristique fermentum id a odio. Sed sit amet facilisis justo. Pellentesque eu odio nec elit euismod interdum a eget ligula. Nullam eu elit vel risus dignissim euismod. Fusce condimentum, lectus id cursus venenatis, felis massa maximus nulla, in fermentum quam sem vitae ligula. Vestibulum dictum orci eu diam feugiat, in interdum ante blandit. Nam ut lectus vitae ligula ultricies interdum eget ac nulla. Curabitur vehicula euismod turpis eu fermentum. In hac habitasse platea dictumst. Cras a mauris sit amet nunc placerat dapibus. Vestibulum in purus sem. Phasellus in dapibus libero, ac finibus quam. Nullam vestibulum risus eget eleifend tristique. Integer dignissim libero in nibh cursus, non eleifend libero egestas. In consectetur, justo eget suscipit egestas, nunc purus dignissim augue, non tincidunt turpis quam eu turpis. In hac habitasse platea dictumst.</div>
+          
+          </div>
  <p id="infoContent2">
         hgjkl;''
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod quam eu tortor congue, quis tincidunt elit fringilla. Nunc et neque vel quam tincidunt facilisis. Nulla facilisi. Praesent hendrerit, quam quis malesuada facilisis, libero libero hendrerit erat, nec efficitur libero odio eu tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas vitae turpis ut elit fermentum lacinia vel non velit. Sed euismod semper sapien, ac venenatis sapien dignissim vel. Pellentesque sodales ullamcorper libero, a tempor urna vehicula ac. Fusce nec erat libero. Fusce congue nunc id ipsum interdum, in laoreet orci dictum. Maecenas eu magna vitae ex tincidunt faucibus id in massa. Vivamus eu rhoncus tortor. Sed eget fermentum quam. Donec eget aliquam nulla, sed consectetur mi. Ut vel viverra libero. Integer ullamcorper orci nec metus ultrices vehicula. Duis consequat odio eget justo sodales, eu cursus elit vehicula.
-
-Proin auctor non risus eu iaculis. Sed bibendum bibendum felis, sit amet euismod est eleifend ut. Vestibulum et odio augue. Etiam cursus arcu sed arcu cursus, quis vehicula turpis bibendum. Vestibulum ut justo ac libero efficitur bibendum. Nulla lacinia, metus a congue euismod, odio elit consectetur tortor, ac luctus odio massa in augue. Sed elementum justo vel tellus euismod bibendum. Suspendisse potenti. Curabitur at justo vel sapien luctus gravida. Sed sed volutpat augue. Maecenas varius, nunc vel aliquet suscipit, lectus odio pharetra est, vel tincidunt quam erat in erat. Integer ultrices, dolor a bibendum scelerisque, metus ex lobortis arcu, nec tincidunt dui lorem at justo. Phasellus eu velit tristique, lacinia est non, efficitur tortor. Nunc et mattis tortor. Cras non enim id sapien congue tempus in sit amet purus.
-
-Vivamus non congue tellus. Integer volutpat justo nec sapien lacinia, quis condimentum justo sodales. Sed malesuada euismod libero, eu efficitur felis rhoncus id. Suspendisse potenti. Suspendisse potenti. Sed non dui id tortor eleifend ultrices. Etiam tincidunt libero vel lacus fringilla, ac venenatis metus aliquet. Vestibulum viverra, justo sit amet eleifend sagittis, urna leo elementum leo, nec viverra purus est ut felis. Nullam congue ac eros vel rhoncus. Sed vitae justo nec odio commodo facilisis. Vivamus nec sapien justo. Curabitur ullamcorper varius turpis, a lacinia lorem volutpat a. Fusce eu nunc vel felis congue hendrerit. Duis in hendrerit turpis.
-
-Praesent malesuada, odio vel luctus euismod, sapien tellus efficitur lectus, non blandit lorem velit ut ex. Sed quis justo eu purus egestas venenatis ac sit amet sapien. Proin at vestibulum justo. Nam non nisl id libero hendrerit dignissim. Ut auctor, nunc sit amet vehicula tristique, nunc libero gravida justo, et fermentum arcu odio eget nulla. Vestibulum id sem et orci semper vehicula. Sed a tincidunt urna. Sed venenatis scelerisque nisl at feugiat. Curabitur tincidunt feugiat felis, vel hendrerit eros. Sed non libero non ex dictum ultrices. Nullam interdum ex ac libero bibendum, id suscipit dolor rhoncus. Integer vel varius erat. In viverra felis non mi dignissim blandit.
-
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus id nunc et libero interdum accumsan. Sed varius arcu ac libero mattis, id volutpat ex eleifend. Proin id tristique dui. Etiam tristique odio ac efficitur auctor. Nam sed lacinia justo. Fusce nec quam non ipsum facilisis fermentum in non sem. Ut ut rutrum est. Aenean commodo vestibulum massa, a varius velit fermentum eget. Integer quis nisl in erat volutpat consequat. Aenean vitae ex nunc. Nulla facilisi. Integer eu nunc a metus lacinia euismod. Maecenas volutpat fermentum sapien eget fringilla.
-
-Fusce ut orci id libero tristique fermentum id a odio. Sed sit amet facilisis justo. Pellentesque eu odio nec elit euismod interdum a eget ligula. Nullam eu elit vel risus dignissim euismod. Fusce condimentum, lectus id cursus venenatis, felis massa maximus nulla, in fermentum quam sem vitae ligula. Vestibulum dictum orci eu diam feugiat, in interdum ante blandit. Nam ut lectus vitae ligula ultricies interdum eget ac nulla. Curabitur vehicula euismod turpis eu fermentum. In hac habitasse platea dictumst. Cras a mauris sit amet nunc placerat dapibus. Vestibulum in purus sem. Phasellus in dapibus libero, ac finibus quam. Nullam vestibulum risus eget eleifend tristique. Integer dignissim libero in nibh cursus, non eleifend libero egestas. In consectetur, justo eget suscipit egestas, nunc purus dignissim augue, non tincidunt turpis quam eu turpis. In hac habitasse platea dictumst.</p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
       </div>
       <div class="sticky top-0 h-screen w-[100%]" id="map">
       
@@ -95,7 +80,7 @@ Fusce ut orci id libero tristique fermentum id a odio. Sed sit amet facilisis ju
                                           "{{ coordinates_list_json|safe|escapejs }}"
                                         );
                                         console.log("----coordinatesList----")
-                                        lineGraphFromCountries(coordinatesList)
+                     
                                         console.log(coordinatesList);
                                         function initMap() {
                                           // New map
@@ -134,6 +119,7 @@ Fusce ut orci id libero tristique fermentum id a odio. Sed sit amet facilisis ju
                                                 updateInfoCard(props.card_data);
                                                 drawLineToUkraine(props.coords);
                                                 showInfoContent1();
+                                                hideLineGraphs();
                                               });
                                             }
 
@@ -192,9 +178,9 @@ Fusce ut orci id libero tristique fermentum id a odio. Sed sit amet facilisis ju
                                           </div>
                                         </div>
 
-                                        <canvas id="myChart"></canvas>
+                                        
                                         <canvas id="decChart"></canvas>
-                                        <canvas id="pyChart"></canvas>
+                                        
                                         <canvas id="myLineChart"></canvas>
 
                                           
@@ -211,38 +197,7 @@ Fusce ut orci id libero tristique fermentum id a odio. Sed sit amet facilisis ju
                                           <p>procedure type: ${data.coa_name}</p>
                                           <p>procedure type: ${data.coo_name}</p>
                                           `;
-                                          var ctx = document.getElementById("myChart").getContext("2d");
-
-  // Create the data for the chart
-  var chartData = {
-    labels: ["Female", "Male"],
-    datasets: [
-      {
-        label: "Gender Percentage",
-        data: [
-          Math.round((data.f_total / (data.f_total + data.m_total)) * 100),
-          Math.round((data.m_total / (data.f_total + data.m_total)) * 100),
-        ],
-        backgroundColor: ["rgba(255, 99, 132, 0.5)", "rgba(54, 162, 235, 0.5)"],
-        borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
-        borderWidth: 1,
-      },
-    ],
-  };
-
-  // Create and display the chart
-  var myChart = new Chart(ctx, {
-    type: "bar",
-    data: chartData,
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true,
-          max: 100,
-        },
-      },
-    },
-  });
+                                         
 
    var ctx = document.getElementById("decChart").getContext("2d");
 
@@ -251,7 +206,7 @@ Fusce ut orci id libero tristique fermentum id a odio. Sed sit amet facilisis ju
     labels: ["Decisions rejected", "Decisions recognized", "Decisions closed", "other decisions"],
     datasets: [
       {
-        label: "Decision Percentage",
+        label: "Decision Percentage ",
         data: [
           Math.round((data.dec_rejected / (data.dec_total)) * 100),
           Math.round((data.dec_recognized / (data.dec_total)) * 100),
@@ -278,37 +233,9 @@ Fusce ut orci id libero tristique fermentum id a odio. Sed sit amet facilisis ju
       },
     },
   });
-   var ctx = document.getElementById("pyChart").getContext("2d");
+   
 
-  // Create the data for the chart
-  var chartData = {
-    labels: ["Female", "Male"],
-    datasets: [
-      {
-        data: [
-          Math.round((data.f_total / (data.f_total + data.m_total)) * 100),
-          Math.round((data.m_total / (data.f_total + data.m_total)) * 100),
-        ],
-        backgroundColor: ["rgba(255, 99, 132, 0.5)", "rgba(54, 162, 235, 0.5)"],
-        borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
-        borderWidth: 1,
-      },
-    ],
-  };
-
-  // Create and display the chart as a pie chart
-  var pyChart = new Chart(ctx, {
-    type: "pie",
-    data: chartData,
-    options: {
-      plugins: {
-        legend: {
-          display: true,
-          position: "right", // You can adjust the legend position
-        },
-      },
-    },
-  });
+  
 
  
 
@@ -410,6 +337,145 @@ Fusce ut orci id libero tristique fermentum id a odio. Sed sit amet facilisis ju
         infoBtn1.classList.remove("bg-red-500");
 
     }
+
+    function hideLineGraphs() {
+        let lineGraphs = document.getElementById("LineChart");
+        let line2Graphs = document.getElementById("Line2Chart");
+        lineGraphs.classList.add("hidden");
+        line2Graphs.classList.add("hidden");
+
+    }
+
+ let litx = document.getElementById("LineChart").getContext("2d");
+
+// Preprocess the data from "applications" and "decisions"
+let applicationData = "{{ applications | safe | escapejs }}";
+let newApplicationData;
+let decisionData = "{{ decisions | safe | escapejs }}";
+let newDecisionData;
+
+try {
+    // If the data is a JSON string, this will parse it into a JavaScript object
+    newApplicationData = JSON.parse(applicationData);
+    console.log("----newApplicationData----");
+    console.log(newApplicationData);
+    newDecisionData = JSON.parse(decisionData);
+    console.log("----newDecisionData----");
+    console.log(newDecisionData);
+} catch (e) {
+    // If there was an error parsing, the data might already be a JavaScript object
+    console.error("Error parsing data: ", e);
+    newApplicationData = applicationData;
+    newDecisionData = decisionData;
+}
+console.log("------newApplicationData------");
+console.log(newApplicationData);
+console.log("------newDecisionData------");
+console.log(newDecisionData);
+
+
+// Extract the relevant data for the chart
+let labels = ["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020","2021","2022"];
+
+
+// Create the data for the chart
+let lchartData = {
+  labels: labels,
+  datasets: [
+    {
+      label: "Decisions",
+      data: [{{ total_decisions_by_year.2013 }}, {{ total_decisions_by_year.2014 }}, {{ total_decisions_by_year.2015 }}, {{ total_decisions_by_year.2016 }}, {{ total_decisions_by_year.2017 }}, {{ total_decisions_by_year.2018 }}, {{ total_decisions_by_year.2019 }}, {{ total_decisions_by_year.2020 }}, {{ total_decisions_by_year.2021 }}, {{ total_decisions_by_year.2022 }}],
+      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      borderColor: "rgba(255, 99, 132, 1)",
+      borderWidth: 1,
+    },
+    {
+      label: "applications",
+      data: [{{ total_applications_by_year.2013 }}, {{ total_applications_by_year.2014 }}, {{ total_applications_by_year.2015 }}, {{ total_applications_by_year.2016 }}, {{ total_applications_by_year.2017 }}, {{ total_applications_by_year.2018 }}, {{ total_applications_by_year.2019 }}, {{ total_applications_by_year.2020 }}, {{ total_applications_by_year.2021 }}, {{ total_applications_by_year.2022 }}],
+      backgroundColor: "rgba(54, 162, 235, 0.5)",
+      borderColor: "rgba(54, 162, 235, 1)",
+      borderWidth: 1,
+    },
+  ],
+};
+
+// Create and display the chart as a line chart
+let myLineChart = new Chart(litx, {
+  type: "line",
+  data: lchartData,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  },
+});
+
+ let linetx = document.getElementById("Line2Chart").getContext("2d");
+
+ let secondlabels = ["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020","2021"];
+
+
+// Create the data for the chart
+let linchartData = {
+  labels: labels,
+  datasets: [
+    {
+      label: "Female",
+      data: [{{ total_female_by_year.2013 }}, {{ total_female_by_year.2014 }}, {{ total_female_by_year.2015 }}, {{ total_female_by_year.2016 }}, {{ total_female_by_year.2017 }}, {{ total_female_by_year.2018 }}, {{ total_female_by_year.2019 }}, {{ total_female_by_year.2020 }}, {{ total_female_by_year.2021 }}],
+      backgroundColor: "rgba(255, 99, 132, 0.5)",
+      borderColor: "rgba(255, 99, 132, 1)",
+      borderWidth: 1,
+    },
+    {
+      label: "male",
+      data: [{{ total_male_by_year.2013 }}, {{ total_male_by_year.2014 }}, {{ total_male_by_year.2015 }}, {{ total_male_by_year.2016 }}, {{ total_male_by_year.2017 }}, {{ total_male_by_year.2018 }}, {{ total_male_by_year.2019 }}, {{ total_male_by_year.2020 }}, {{ total_male_by_year.2021 }}],
+      backgroundColor: "rgba(54, 162, 235, 0.5)",
+      borderColor: "rgba(54, 162, 235, 1)",
+      borderWidth: 1,
+    },
+  ],
+};
+
+// Create and display the chart as a line chart
+let myLine2Chart = new Chart(linetx, {
+  type: "line",
+  data: linchartData,
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+    },
+  },
+});
+
+
+
+ 
+
+console.log(["{{ total_decisions_by_year.2013 }}, {{ total_decisions_by_year.2014 }}, {{ total_decisions_by_year.2015 }}, {{ total_decisions_by_year.2016 }}, {{ total_decisions_by_year.2017 }}, {{ total_decisions_by_year.2018 }}, {{ total_decisions_by_year.2019 }}, {{ total_decisions_by_year.2020 }}, {{ total_decisions_by_year.2021 }}, {{ total_decisions_by_year.2022 }}"]);
+console.log("{{total_decisions_by_year.2013 }}");
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  let infoContent1 = document.getElementById("infoContent1");
+        let infoContent2 = document.getElementById("infoContent2");
+
+        let infoBtn1 = document.getElementById("infoBtn1");
+        let infoBtn2 = document.getElementById("infoBtn2");
+        
+        infoContent2.classList.add("hidden");
+        infoContent1.classList.remove("hidden");
+        infoBtn1.classList.add("bg-red-500");
+        infoBtn2.classList.remove("bg-red-500");
+});
+
+
+
+
+
 
 
        
