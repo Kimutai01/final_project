@@ -103,6 +103,10 @@
                                             var marker = new google.maps.Marker({
                                               position: props.coords,
                                               map: map,
+                                              icon: {
+                                                url: "{% static 'images/uk1.png' %}",
+                                                scaledSize: new google.maps.Size(40, 40), // You can adjust the size
+                                              },
                                             });
 
                                             console.log(props);
@@ -132,7 +136,7 @@
                   position: props.coords,
                   map: map,
                   icon: {
-                      url: "{% static 'images/uk1.png' %}",
+                      url: "{% static 'images/uk.png' %}",
                       scaledSize: new google.maps.Size(40, 40) // You can adjust the size
                   }
               });
@@ -484,10 +488,10 @@ document.addEventListener("DOMContentLoaded", function () {
         let infoBtn1 = document.getElementById("infoBtn1");
         let infoBtn2 = document.getElementById("infoBtn2");
         
-        infoContent2.classList.add("hidden");
-        infoContent1.classList.remove("hidden");
-        infoBtn1.classList.add("bg-red-500");
-        infoBtn2.classList.remove("bg-red-500");
+        infoContent1.classList.add("hidden");
+        infoContent2.classList.remove("hidden");
+        infoBtn2.classList.add("bg-red-500");
+        infoBtn1.classList.remove("bg-red-500");
 });
 
 
