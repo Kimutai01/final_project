@@ -36,7 +36,7 @@
 
   <div
     id="mobileMenu"
-    class="fixed right-0 top-0 h-screen w-1/4 bg-gray-800 z-[1000] hidden"
+    class="fixed right-0 top-0 h-screen w-1/2 md:w-1/4 bg-gray-800 z-[1000] hidden"
   >
     <div>
       <div class="flex justify-between items-center w-full mt-3 px-3">
@@ -53,14 +53,24 @@
           </li>
           <div id="dataInfo" class="hidden absolute right-52 top-20 bg-gray-700 text-white p-4 w-64">
         <!-- Add your information content here -->
-        Information about Data...
+        <ul>
+          <li class="pt-4"><a target="_blank" href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Asylum_applications_final/ows?service=WFS&version=1.0.0&request=GetCapabilities"> Applications</a></li>
+          <li class="pt-4"><a target="_blank" href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Asylum_decisions_final/ows?service=WFS&version=1.0.0&request=GetCapabilities">Decisions</a></li>
+          <li class="pt-4"><a target="_blank" href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Ukrainian_demographics_final/ows?service=WFS&version=1.0.0&request=GetCapabilities">Demographics</a></li>
+        </ul>
+
     </div>
           <li class="ml-3 mt-10 text-xl text-[#fff] uppercase">
-            <a href="" onmouseover="showExcel()" onmouseout="hideExcel()">Excel</a>
+            <a href="" onmouseover="showExcel()" onmouseout="hideExcel()">WMS</a>
           </li>
           <div id="excelInfo" class="hidden absolute right-52 top-36 bg-gray-700 text-white p-4 w-64">
         <!-- Add your information content here -->
-        Information about Data...
+         <ul>
+          <li class="pt-4"><a target="_blank" href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Asylum_applications_final/ows?service=WMS&version=1.3.0&request=GetCapabilities"> Applications</a></li>
+          <li class="pt-4"><a target="_blank" href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Asylum_decisions_final/ows?service=WMS&version=1.3.0&request=GetCapabilities">Decisions</a></li>
+          <li class="pt-4"><a target="_blank" href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Ukrainian_demographics_final/ows?service=WMS&version=1.3.0&request=GetCapabilities">Demographics</a></li>
+        </ul>
+
     </div>
           {% comment %} {% if user.is_authenticated %}
           <li class="ml-3 mt-10 text-xl uppercase">
