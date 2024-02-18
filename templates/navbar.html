@@ -5,13 +5,11 @@
     class="flex justify-between items-center w-full h-full md:px-4 py-4 px-2 2xl:px-16 rounded"
   >
     <div class="flex gap-3 items-center py-2">
-      <img
-        class="w-16 h-16"
-        src="{% static 'images/logo.png' %}"
-        alt="logo"
-      />
-      
-      <a class="text-[#eee] font-bold text-3xl font-allura uppercase" href="">Uate</a>
+      <img class="w-16 h-16" src="{% static 'images/logo.png' %}" alt="logo" />
+
+      <a class="text-[#eee] font-bold text-3xl font-allura uppercase" href=""
+        >Uate</a
+      >
     </div>
     <div>
       <ul class="hidden md:flex font-barlow" style="color: #ecf0f3">
@@ -20,18 +18,15 @@
         >
           <a href="">Ukrainian Asylum Tracking in Europe</a>
         </li>
-
       </ul>
-     
     </div>
-     <div
-        id="mobileMenuIcon"
-        class="uppercase hover:text-[#cda873] hover:scale-105 transition-all duration-all cursor-pointer text-xl font-bold font-barlow"
-        style="color: #ecf0f3"
-      >
-        data 
-      </div>
-   
+    <div
+      id="mobileMenuIcon"
+      class="uppercase hover:text-[#cda873] hover:scale-105 transition-all duration-all cursor-pointer text-xl font-bold font-barlow"
+      style="color: #ecf0f3"
+    >
+      WFS/WMS
+    </div>
   </div>
 
   <div
@@ -46,61 +41,78 @@
       </div>
     </div>
     <div>
-      <div class="flex flex-col justify-center items-center text-[#fff] font-barlow py-4">
+      <div
+        class="flex flex-col justify-center items-center text-[#fff] font-barlow py-4"
+      >
         <ul>
           <li class="ml-3 mt-10 text-xl text-[#fff] uppercase">
             <a href="" onmouseover="showInfo()" onmouseout="hideInfo()">WFS</a>
           </li>
-          <div id="dataInfo" class="hidden absolute right-52 top-20 bg-gray-700 text-white p-4 w-64">
-        <!-- Add your information content here -->
-        <ul>
-          <li class="pt-4"><a target="_blank" href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Asylum_applications_final/ows?service=WFS&version=1.0.0&request=GetCapabilities"> Applications</a></li>
-          <li class="pt-4"><a target="_blank" href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Asylum_decisions_final/ows?service=WFS&version=1.0.0&request=GetCapabilities">Decisions</a></li>
-          <li class="pt-4"><a target="_blank" href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Ukrainian_demographics_final/ows?service=WFS&version=1.0.0&request=GetCapabilities">Demographics</a></li>
-        </ul>
-
-    </div>
+          <div
+            id="dataInfo"
+            class="hidden absolute right-52 top-20 bg-gray-700 text-white p-4 w-64"
+          >
+            <!-- Add your information content here -->
+            <ul>
+              <li class="pt-4">
+                <a
+                  target="_blank"
+                  href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Asylum_applications_final/ows?service=WFS&version=1.0.0&request=GetCapabilities"
+                >
+                  Get capabilities applications: Applications</a
+                >
+              </li>
+              <li class="pt-4">
+                <a
+                  target="_blank"
+                  href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Asylum_decisions_final/ows?service=WFS&version=1.0.0&request=GetCapabilities"
+                  >Get capabilities applications: Decisions</a
+                >
+              </li>
+              <li class="pt-4">
+                <a
+                  target="_blank"
+                  href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Ukrainian_demographics_final/ows?service=WFS&version=1.0.0&request=GetCapabilities"
+                  >Get capabilities applications: Demographics</a
+                >
+              </li>
+            </ul>
+          </div>
           <li class="ml-3 mt-10 text-xl text-[#fff] uppercase">
-            <a href="" onmouseover="showExcel()" onmouseout="hideExcel()">WMS</a>
-          </li>
-          <div id="excelInfo" class="hidden absolute right-52 top-36 bg-gray-700 text-white p-4 w-64">
-        <!-- Add your information content here -->
-         <ul>
-          <li class="pt-4"><a target="_blank" href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Asylum_applications_final/ows?service=WMS&version=1.3.0&request=GetCapabilities"> Applications</a></li>
-          <li class="pt-4"><a target="_blank" href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Asylum_decisions_final/ows?service=WMS&version=1.3.0&request=GetCapabilities">Decisions</a></li>
-          <li class="pt-4"><a target="_blank" href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Ukrainian_demographics_final/ows?service=WMS&version=1.3.0&request=GetCapabilities">Demographics</a></li>
-        </ul>
-
-    </div>
-          {% comment %} {% if user.is_authenticated %}
-          <li class="ml-3 mt-10 text-xl uppercase">
-            <a href="">My account</a>
-          </li>
-          {% endif %} {% if user.is_authenticated %}
-          <li class="ml-3 mt-10 text-xl uppercase">
-            <a
-              class="py-1 hover:text-[#cda873] hover:scale-105 transition-all duration-all rounded-md font-medium"
-              href="{% url 'logout' %}"
+            <a href="" onmouseover="showExcel()" onmouseout="hideExcel()"
+              >WMS</a
             >
-              Logout
-            </a>
           </li>
-          {% else %} {% endcomment %}
-          {% comment %} <li class="ml-3 mt-10 text-xl uppercase">
-            <a class="flex flex-col">
-              <span
-                class="py-1 hover:text-[#cda873] hover:scale-105 transition-all duration-all rounded-md font-medium"
-              >
-                <a href="">Register </a>
-              </span>
-
-              <span
-                class="px-2 py-1 hover:text-[#cda873] hover:scale-105 transition-all duration-all rounded-md text-[#fff] font-medium"
-              >
-                <a href="">Login</a>
-              </span>
-            </a>
-          </li> {% endcomment %}
+          <div
+            id="excelInfo"
+            class="hidden absolute right-52 top-36 bg-gray-700 text-white p-4 w-64"
+          >
+            <!-- Add your information content here -->
+            <ul>
+              <li class="pt-4">
+                <a
+                  target="_blank"
+                  href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Asylum_applications_final/ows?service=WMS&version=1.3.0&request=GetCapabilities"
+                >
+                  Get capabilities applications: Applications</a
+                >
+              </li>
+              <li class="pt-4">
+                <a
+                  target="_blank"
+                  href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Asylum_decisions_final/ows?service=WMS&version=1.3.0&request=GetCapabilities"
+                  >Get capabilities applications: Decisions</a
+                >
+              </li>
+              <li class="pt-4">
+                <a
+                  target="_blank"
+                  href="https://geoserver22s.zgis.at/geoserver/IPSDI_WT23/Ukrainian_demographics_final/ows?service=WMS&version=1.3.0&request=GetCapabilities"
+                  >Get capabilities applications: Demographics</a
+                >
+              </li>
+            </ul>
+          </div>
         </ul>
       </div>
     </div>
@@ -124,84 +136,50 @@
     mobileMenuIcon.addEventListener("click", handleMobileNav);
     closeIcon.addEventListener("click", handleMobileNav);
 
-     let infoTimeout;
+    let infoTimeout;
 
-function showInfo() {
-    clearTimeout(infoTimeout); // Clear any existing timeout
-    document.getElementById('dataInfo').classList.remove('hidden');
-}
-
-function scheduleHideInfo() {
-    // Schedule the hiding, allows time for the user to move the mouse to the info window
-    infoTimeout = setTimeout(hideInfo, 500);
-}
-
-function hideInfo() {
-    if (!document.getElementById('dataInfo').matches(':hover')) {
-        // Only hide if the user is not hovering over the info window
-        document.getElementById('dataInfo').classList.add('hidden');
+    function showInfo() {
+      clearTimeout(infoTimeout); // Clear any existing timeout
+      document.getElementById("dataInfo").classList.remove("hidden");
     }
-}
 
-document.getElementById('dataInfo').addEventListener('mouseleave', scheduleHideInfo);
-
-let excelTimeout;
-
-function showExcel() {
-    clearTimeout(excelTimeout); // Clear any existing timeout
-    document.getElementById('excelInfo').classList.remove('hidden');
-}
-
-function scheduleHideExcel() {
-    // Schedule the hiding, allows time for the user to move the mouse to the info window
-    infoTimeout = setTimeout(hideExcel, 500);
-}
-
-function hideExcel() {
-    if (!document.getElementById('excelInfo').matches(':hover')) {
-        // Only hide if the user is not hovering over the info window
-        document.getElementById('excelInfo').classList.add('hidden');
+    function scheduleHideInfo() {
+      // Schedule the hiding, allows time for the user to move the mouse to the info window
+      infoTimeout = setTimeout(hideInfo, 500);
     }
-}
 
-document.getElementById('excelInfo').addEventListener('mouseleave', scheduleHideExcel);
-
-
-    {% comment %} function getLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
+    function hideInfo() {
+      if (!document.getElementById("dataInfo").matches(":hover")) {
+        // Only hide if the user is not hovering over the info window
+        document.getElementById("dataInfo").classList.add("hidden");
       }
-    } {% endcomment %}
+    }
 
-    {% comment %} function showPosition(position) {
-      let lat = position.coords.latitude;
-      let lng = position.coords.longitude;
+    document
+      .getElementById("dataInfo")
+      .addEventListener("mouseleave", scheduleHideInfo);
 
-      //from the coordinates get City
+    let excelTimeout;
 
-      // hit AJAX request to googlemaps api endpoint and get the location data using those lat and lng
-      let GOOGLE_API_KEY = "{{ GOOGLE_API_KEY }}";
-      let url =
-        "https://maps.googleapis.com/maps/api/geocode/json?latlng=" +
-        lat +
-        "," +
-        lng +
-        "+&key=" +
-        GOOGLE_API_KEY;
+    function showExcel() {
+      clearTimeout(excelTimeout); // Clear any existing timeout
+      document.getElementById("excelInfo").classList.remove("hidden");
+    }
 
-      $.ajax({
-        url: url,
-        type: "GET",
-        success: function (response) {
-          let current_location = response.results[0].formatted_address;
-          console.log(current_location);
-          x.value = current_location;
-          sessionStorage.setItem("current_location", current_location);
-          window.location = "?lat=" + lat + "&lng=" + lng;
-        },
-      });
-    } {% endcomment %}
+    function scheduleHideExcel() {
+      // Schedule the hiding, allows time for the user to move the mouse to the info window
+      infoTimeout = setTimeout(hideExcel, 500);
+    }
+
+    function hideExcel() {
+      if (!document.getElementById("excelInfo").matches(":hover")) {
+        // Only hide if the user is not hovering over the info window
+        document.getElementById("excelInfo").classList.add("hidden");
+      }
+    }
+
+    document
+      .getElementById("excelInfo")
+      .addEventListener("mouseleave", scheduleHideExcel);
   </script>
 </div>

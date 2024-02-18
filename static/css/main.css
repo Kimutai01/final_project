@@ -3,3 +3,8 @@
 * {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
+
+#pyChart {
+  width: 100px;
+  height: 100px;
+}
